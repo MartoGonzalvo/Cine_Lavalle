@@ -46,16 +46,16 @@
                 <div class="form-group">
                     @Html.Label("Calificacion", new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.IdCalificacion, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.IdCalificacion, "El campo calificación es obligatorio", new { @class = "text-danger" })
+                        @Html.Action("listarClasificacion", "Administracion")
+                        @Html.ValidationMessageFor(model => model.IdCalificacion, " ", new { @class = "text-danger" })
                     </div>
                 </div>
 
                 <div class="form-group">
                     @Html.Label("Genero" ,new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.IdGenero, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.IdGenero, "El campo Género es obligatorio", new { @class = "text-danger" })
+                        @Html.Action("listarGenero","Administracion")
+                        @Html.ValidationMessageFor(model => model.IdGenero, " ", new { @class = "text-danger" })
                     </div>
                 </div>
 

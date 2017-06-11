@@ -11,15 +11,19 @@ namespace Peliculas
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Generos
     {
         public Generos()
         {
             this.Peliculas = new HashSet<Peliculas>();
         }
-    
+
+        [Required]
         public int IdGenero { get; set; }
+
+        [Required]
         public string Nombre { get; set; }
     
         public virtual ICollection<Peliculas> Peliculas { get; set; }

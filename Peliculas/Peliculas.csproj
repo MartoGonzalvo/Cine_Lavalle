@@ -211,6 +211,8 @@
     <Content Include="Views\Shared\_LayoutAdministracion.cshtml" />
     <Content Include="Views\Administracion\GestionPeliculas.cshtml" />
     <Content Include="Views\Administracion\AgregarPelicula.cshtml" />
+    <Content Include="Views\Administracion\listarClasificacion.cshtml" />
+    <Content Include="Views\Administracion\listarGenero.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

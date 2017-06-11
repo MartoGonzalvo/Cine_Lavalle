@@ -29,6 +29,22 @@ namespace Peliculas.Controllers
             return View("GestionPeliculas",listaPeliculas);
         }
 
+
+        //metodo para cargar la lista de genero y mostrarlo como partial view una lista en el formulario de carga de peliculas
+
+        public ActionResult listarClasificacion()
+        {
+            var cal = new BaseTp();
+            return PartialView(cal.Calificaciones.ToList());
+        }
+
+        public ActionResult listarGenero()
+        {
+            var gen = new BaseTp();
+            return PartialView(gen.Generos.ToList());
+        }
+
+
         public ActionResult AgregarPelicula()
         {
 

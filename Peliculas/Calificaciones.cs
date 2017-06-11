@@ -11,7 +11,8 @@ namespace Peliculas
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Calificaciones
     {
         public Calificaciones()
@@ -19,7 +20,9 @@ namespace Peliculas
             this.Peliculas = new HashSet<Peliculas>();
         }
     
+        [Required]
         public int IdCalificacion { get; set; }
+        [Required]
         public string Nombre { get; set; }
     
         public virtual ICollection<Peliculas> Peliculas { get; set; }
