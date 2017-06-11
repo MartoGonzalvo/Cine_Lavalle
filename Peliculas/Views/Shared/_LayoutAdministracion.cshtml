@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="canonical" href="">
+    <title>Administración</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <!-- font Awesome CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- Main Styles CSS -->
+    <link href="~/Content/css/main.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+
+        <div class="container">
+
+            <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Cine Lavalle</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav"></ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/Administracion/GestionPeliculas">Gestión de Peliculas</a></li>
+                            <li><a href="/Administracion/GestionPeliculas">Gestión de Carteleras</a></li>
+                            <li><a href="/Administracion/GestionPeliculas">Gestión de Sedes</a></li>
+                            <li><a href="/Administracion/GestionPeliculas">Gestión de Reservas</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            @RenderBody()
+            <hr />
+            <footer>
+                Todos los Derechos Reservados 2017
+            </footer>
+        </div>
+        <!-- /.container -->
+
+
+
+        <div class="container">
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    <!-- Call functions on document ready -->
+    <script>
+        $(document).ready(function() {
+            // Call Functions Like
+            appMaster.aFunction();
+            // Call anotherFunction
+            appMaster.anotherFunction();
+        });
+    </script>
+</body>
+</html>

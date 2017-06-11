@@ -1,40 +1,30 @@
-﻿
-@{
-    Layout ="~/Views/_Layout.cshtml";
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3>Login</h3></div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label>Usuario:</label>
+                        <input type="text" name="usr" class="form-control" />
+                    </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
-</head>
-<body>
-    <div class="container">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Usuario</label>
-                            <input type="text" class="form-control" id="" name="usr" placeholder="Ingrese user">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="" name="pass" placeholder="Password">
+                    <div class="form-group">
+                        <label>Contraseña:</label>
+                        <input type="text" name="pass" class="form-control" />
+                    </div>
 
-                        </div>
-                        <input type="submit" value="Login" class="btn btn-primary" />
-
-                    </form>
-                </div>
+                    <input type="submit" value="Ingresar" class="btn btn-primary" />
+                </form>
             </div>
-           
         </div>
-        <div class="col-md-4"></div>
-        
     </div>
-</body>
-</html>
+
+
+    <div class="col-md-4"></div>
+</div>

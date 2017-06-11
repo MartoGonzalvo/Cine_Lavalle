@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63dbcb2ea71c4f738137a60c3e0b2fe9" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TPModel.Calificaciones" Width="1.5" PointX="0.625" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Carteleras" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Generos" Width="1.5" PointX="2.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Peliculas" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Reservas" Width="1.5" PointX="7.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Sedes" Width="1.5" PointX="5.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.TiposDocumentos" Width="1.5" PointX="9.375" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Usuarios" Width="1.5" PointX="9.125" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TPModel.Versiones" Width="1.5" PointX="5.125" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="TPModel.FK_Peliculas_Calificaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Carteleras_Peliculas" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Carteleras_Sedes" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Carteleras_Versiones" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Peliculas_Generos" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Reservas_Peliculas" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Reservas_Sedes" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Reservas_TiposDocumentos" ManuallyRouted="false" />
+        <AssociationConnector Association="TPModel.FK_Reservas_Versiones" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

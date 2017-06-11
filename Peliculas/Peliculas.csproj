@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -76,6 +80,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -117,20 +124,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="20171C_TP.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>20171C_TP.edmx</DependentUpon>
+      <LastGenOutput>20171C_TP.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="20171C_TP.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>20171C_TP.edmx</DependentUpon>
+      <LastGenOutput>20171C_TP.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="20171C_TP.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>20171C_TP.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="20171C_TP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="20171C_TP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>20171C_TP.edmx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Calificaciones.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Carteleras.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AdministracionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Generos.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Registro.cs" />
+    <Compile Include="Models\AdministracionModel.cs" />
+    <Compile Include="Peliculas.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservas.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sedes.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiposDocumentos.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Versiones.cs">
+      <DependentUpon>20171C_TP.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -139,8 +198,19 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <EntityDeploy Include="20171C_TP.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>20171C_TP.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="20171C_TP.edmx.diagram">
+      <DependentUpon>20171C_TP.edmx</DependentUpon>
+    </Content>
     <Content Include="Views\Administracion\Login.cshtml" />
+    <Content Include="Views\Administracion\Inicio.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdministracion.cshtml" />
+    <Content Include="Views\Administracion\GestionPeliculas.cshtml" />
+    <Content Include="Views\Administracion\AgregarPelicula.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,9 +219,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\img\" />
     <Folder Include="Content\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

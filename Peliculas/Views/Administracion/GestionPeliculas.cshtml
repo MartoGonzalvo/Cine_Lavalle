@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Peliculas>
+
+@{
+    ViewBag.Title = "Gestion de Peliculas";
+    Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
+}
+
+<h2>Gestion De Peliculas</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nueva Película", "AgregarPeliculas")
+</p>
+<table class="table table-hover">
+    <tr>
+       
+        <th>
+            <span>Nombre</span>
+        </th>
+        <th>
+           <span>Descripcion</span>
+        </th>
+        
+        <th>
+            <span>Calificación</span>
+        </th>
+        <th>
+            <span>Género</span>
+        </th>
+        <th>
+            <span>Duración</span>
+        </th>
+        <th>
+            <span>Fecha de Carga</span>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        
+        <td>
+            @if(item.IdCalificacion == 1)
+            {
+                <span>ATP</span>
+            }
+
+            @if(item.IdCalificacion == 2)
+            {
+                <span>Mayores de 13</span>
+            }
+
+            @if(item.IdCalificacion == 3)
+            {
+                <span>Mayores de 13 con resera</span>
+            }
+
+            @if(item.IdCalificacion == 4)
+            {
+                <span>Mayores de 16</span>
+            }
+
+            @if (item.IdCalificacion == 5)
+            {
+                <span>Mayores de 16 con reserva</span>
+            }
+            
+        </td>
+        <td>
+            @if (item.IdGenero == 1)
+            {
+                <span>Comedia</span>
+            }
+
+            @if (item.IdGenero == 2)
+            {
+                <span>Terror</span>
+            }
+
+            @if (item.IdGenero == 3)
+            {
+                <span>Fantasia</span>
+            }
+
+            @if (item.IdGenero == 4)
+            {
+                <span>Ficcion</span>
+            }
+
+           
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duracion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCarga)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Borrar", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
