@@ -5,6 +5,8 @@
     Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
 }
 
+@if (Session["NombreUsuario"] != null)
+{
 <h2>Gestion De Peliculas</h2>
 
 <p>
@@ -35,7 +37,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         
         <td>
@@ -46,22 +49,22 @@
         </td>
         
         <td>
-            @if(item.IdCalificacion == 1)
+            @if (item.IdCalificacion == 1)
             {
                 <span>ATP</span>
             }
 
-            @if(item.IdCalificacion == 2)
+            @if (item.IdCalificacion == 2)
             {
                 <span>Mayores de 13</span>
             }
 
-            @if(item.IdCalificacion == 3)
+            @if (item.IdCalificacion == 3)
             {
                 <span>Mayores de 13 con resera</span>
             }
 
-            @if(item.IdCalificacion == 4)
+            @if (item.IdCalificacion == 4)
             {
                 <span>Mayores de 16</span>
             }
@@ -110,3 +113,4 @@
 }
 
 </table>
+}

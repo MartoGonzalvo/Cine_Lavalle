@@ -170,7 +170,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AdministracionModel.cs" />
     <Compile Include="Peliculas.cs">
       <DependentUpon>20171C_TP.tt</DependentUpon>
     </Compile>
@@ -223,6 +222,7 @@
   <ItemGroup>
     <Folder Include="Content\img\" />
     <Folder Include="Content\js\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

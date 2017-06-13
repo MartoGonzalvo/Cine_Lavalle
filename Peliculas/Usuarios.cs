@@ -11,11 +11,14 @@ namespace Peliculas
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Usuarios
     {
         public int IdUsuario { get; set; }
+        [Required(ErrorMessage = "Ingrese su nombre de usuario")]
         public string NombreUsuario { get; set; }
+        [Required(ErrorMessage = "Ingrese su contraseña")]
         public string Password { get; set; }
     }
 }

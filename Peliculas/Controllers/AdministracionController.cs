@@ -8,18 +8,42 @@ namespace Peliculas.Controllers
 {
     public class AdministracionController : Controller
     {
-        public ActionResult Inicio()
-        {
-            return View("Inicio");
-        }
-
-
-        // GET: Administracion
+        
         public ActionResult Login()
         {
             return View("Login");
         }
 
+        [HttpPost]
+        public ActionResult Login(Usuarios u)
+        {
+            if (ModelState.IsValid)
+            {
+                BaseTp login = new BaseTp();
+                var log = login.Usuarios.Where(model=>model.NombreUsuario.Equals(u.NombreUsuario) && model.Password.Equals(u.Password)).FirstOrDefault();
+
+                if(log != null)
+                {
+                    Session["NombreUsuario"] = log.NombreUsuario.ToString();
+                    return RedirectToAction("Inicio");
+                }else
+                {
+                    ViewBag.msj = "Usuario y/o contraseña incorrectos";
+                }
+            }
+            return View("Login");
+        }
+
+        public ActionResult logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Login");
+        }
+
+        public ActionResult Inicio()
+        {
+            return View("Inicio");
+        }
 
         //metodo que lista todos los objetos de una tabla y las guarda en una lista
         public ActionResult GestionPeliculas()
