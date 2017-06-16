@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -28,7 +29,7 @@ namespace Peliculas.Controllers
                     return RedirectToAction("Inicio");
                 }else
                 {
-                    ViewBag.msj = "Usuario y/o contraseña incorrectos";
+                    ViewBag.msj = true;
                 }
             }
             return View("Login");
@@ -75,19 +76,32 @@ namespace Peliculas.Controllers
             return View("AgregarPelicula");
         }
 
+        
         [HttpPost]
         public ActionResult AgregarPelicula(Peliculas p)
         {
-            if (!ModelState.IsValid)
+            /*if (!ModelState.IsValid)
             {
                 return View();
             }else
-            {
-                var agregar = new BaseTp();
+            {*/
+                string archivo = Path.GetFileNameWithoutExtension(p.ArchivoImagen.FileName);
+                string extension = Path.GetExtension(p.ArchivoImagen.FileName);
+                archivo = archivo + extension;
+                p.Imagen = "/Content/img" + archivo;
+                archivo = Path.Combine(Server.MapPath("/Content/img/"),archivo);
+                p.ArchivoImagen.SaveAs(archivo);
+               /* var path = ConfigurationManager.AppSettings["pathImagen"];
+
+                var nombre = p.Nombre + "1";
+                Request.Files[0].SaveAs(@"C:\sitio\content\img\" + nombre);
+
+                p.Imagen = nombre;*/
+                BaseTp agregar = new BaseTp();
                 agregar.Peliculas.Add(p);
                 agregar.SaveChanges();
                 return Redirect("GestionPeliculas");
-            }
+           //}
             
         }
         

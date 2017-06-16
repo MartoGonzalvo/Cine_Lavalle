@@ -46,9 +46,11 @@
                 </div>
                 }
                 
-        <div class="alert alert-danger">
-            @ViewBag.msj
-        </div>
+        @if (@ViewBag.msj == true)
+        {
+            <div class="alert alert-danger">Usuario y/o contraseñas incorrectos</div>
+        }
+        
 
 
 

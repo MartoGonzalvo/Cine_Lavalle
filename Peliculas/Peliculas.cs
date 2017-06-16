@@ -12,7 +12,8 @@ namespace Peliculas
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    
+    using System.Web;
+
     public partial class Peliculas
     {
         public Peliculas()
@@ -34,7 +35,10 @@ namespace Peliculas
         public int IdGenero { get; set; }
         [Required]
         public int Duracion { get; set; }
+
         [Required]
+        public HttpPostedFileBase ArchivoImagen { get; set; }
+
         public System.DateTime FechaCarga { get; set; }
     
         public virtual Calificaciones Calificaciones { get; set; }

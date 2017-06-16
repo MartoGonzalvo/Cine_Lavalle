@@ -136,6 +136,9 @@
     </Content>
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\main.css" />
+    <Content Include="Content\img\FOTO N 7.jpg" />
+    <Content Include="Content\img\FOTO N1.jpg" />
+    <Content Include="Content\img\FOTO N4.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -220,7 +223,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\img\" />
     <Folder Include="Content\js\" />
     <Folder Include="Models\" />
   </ItemGroup>
