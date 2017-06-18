@@ -1,0 +1,168 @@
+﻿@model Carteleras
+
+@{
+    ViewBag.Title = "Agregar Cartelera";
+    Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
+}
+
+
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+           
+
+            <div class="form-horizontal">
+                <h4>Agregar Cartelera Nueva</h4>
+                <hr />
+
+                <div class="form-group">
+                    @Html.Label("Sede", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.Action("listarSede", "Administracion")
+                        @Html.ValidationMessageFor(model => model.IdSede, " ", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Pelicula", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.Action("listarPelicula", "Administracion")
+                        @Html.ValidationMessageFor(model => model.IdSede, " ", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HoraInicio, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.HoraInicio, new { htmlAttributes = new { type = "time", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HoraInicio, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FechaInicio, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FechaInicio, new { htmlAttributes = new { type = "date" , @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FechaInicio, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FechaFin, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FechaFin, new { htmlAttributes = new { type = "date", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FechaFin, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Sala", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">       
+                            @Html.Action("listarSala", "Administracion")
+                            @Html.ValidationMessageFor(model => model.NumeroSala, " ", new { @class = "text-danger" })
+                        </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Version", new { @class = "control-label col-md-2" })
+                     <div class="col-md-10">
+                       
+                        @Html.Action("listarVersion", "Administracion")
+                        @Html.ValidationMessageFor(model => model.IdVersion, " ", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Lunes, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Lunes)
+                            @Html.ValidationMessageFor(model => model.Lunes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Martes, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Martes)
+                            @Html.ValidationMessageFor(model => model.Martes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Miercoles, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Miercoles)
+                            @Html.ValidationMessageFor(model => model.Miercoles, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Jueves, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Jueves)
+                            @Html.ValidationMessageFor(model => model.Jueves, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Viernes, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Viernes)
+                            @Html.ValidationMessageFor(model => model.Viernes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Sabado, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Sabado)
+                            @Html.ValidationMessageFor(model => model.Sabado, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Domingo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Domingo)
+                            @Html.ValidationMessageFor(model => model.Domingo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    
+                    <div class="col-md-10">
+                        @Html.HiddenFor(model => model.FechaCarga, new { @Value = DateTime.Today.ToString("yyyy-MM-dd") })
+                        
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Agregar Cartelera" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Volver al listado", "GestionCarteleras")
+        </div>
+</div>
+<div class="col-md-2"></div>
+</div>

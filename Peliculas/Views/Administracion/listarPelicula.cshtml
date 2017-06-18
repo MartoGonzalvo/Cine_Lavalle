@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Peliculas>
+
+<select class="form-control" id="IdPelicula" name="IdPelicula">
+
+    <option value="">Seleccione un opción</option>
+    @foreach (var pel in Model)
+    {
+        <option value="@pel.IdPelicula">@pel.Nombre</option>
+    }
+
+
+</select>

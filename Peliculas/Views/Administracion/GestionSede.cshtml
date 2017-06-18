@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Sedes>
+@{
+    ViewBag.Title = "GestionSede";
+    Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
+}
+@if (Session["NombreUsuario"] != null)
+{
+    <h2>GestionSede</h2>
+
+    <p>
+        @Html.ActionLink("Agregar Una Sede", "AgregarSede")
+    </p>
+    <table class="table table-hover">
+        <tr>
+
+            <th>
+                <span>Nombre</span>
+            </th>
+            <th>
+                <span>Dias</span>
+            </th>
+
+            <th>
+                <span>Precio de entrada general</span>
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrecioGeneral)
+                </td>
+            </tr>
+        }
+    </table>
+
+}
+
+

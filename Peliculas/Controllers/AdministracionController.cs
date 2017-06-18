@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Peliculas.Models;
+
 
 namespace Peliculas.Controllers
 {
@@ -104,6 +106,94 @@ namespace Peliculas.Controllers
            //}
             
         }
-        
+
+        // Gestion de sedes
+        public ActionResult GestionSede()
+        {
+            BaseTp sedes = new BaseTp();
+            List<Sedes> listaSede = sedes.Sedes.ToList();
+            return View("GestionSede", listaSede);
+
+        }
+
+        public ActionResult AgregarSede()
+        {
+            return View("AgregarSede");
+        }
+
+        [HttpPost]
+        public ActionResult AgregarSede(Sedes s)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                var agregar = new BaseTp();
+                agregar.Sedes.Add(s);
+                agregar.SaveChanges();
+                return Redirect("GestionSede");
+            }
+
+        }
+
+        public ActionResult GestionCarteleras()
+        {
+            BaseTp cartelera = new BaseTp();
+            var listaCartelera = (from ca in cartelera.Carteleras
+                                  join se in cartelera.Sedes on ca.IdSede equals se.IdSede
+                                  join pe in cartelera.Peliculas on ca.IdPelicula equals pe.IdPelicula
+                                  join ve in cartelera.Versiones on ca.IdVersion equals ve.IdVersion
+                                  select new CarteleraJoineada { IdCartelera = ca.IdCartelera,SedeNombre = se.Nombre,PeliculaNombre = pe.Nombre,CarteleraHI = ca.HoraInicio, CarteleraFI= ca.FechaInicio, CarteleraFF = ca.FechaFin, CarteleraNS = ca.NumeroSala, versionesNombre = ve.Nombre, lunes = ca.Lunes, martes = ca.Martes, miercoles = ca.Miercoles, jueves = ca.Jueves, viernes = ca.Viernes,sabado =  ca.Sabado, domingo = ca.Domingo }).ToList();
+
+         //List <Carteleras> listaCartelera = cartelera.Carteleras.ToList();
+            return View("GestionCarteleras",listaCartelera);
+
+        }
+
+       
+        public ActionResult listarSede()
+        {
+            var sede = new BaseTp();
+            return PartialView(sede.Sedes.ToList());
+        }
+
+        public ActionResult listarPelicula()
+        {
+            var pelicula = new BaseTp();
+            return PartialView(pelicula.Peliculas.ToList());
+        }
+
+
+        public ActionResult listarVersion()
+        {
+            var version = new BaseTp();
+            return PartialView(version.Versiones.ToList());
+        }
+
+        public ActionResult listarSala()
+        {
+            
+            return PartialView("listarSala");
+        }
+
+        public ActionResult AgregarCartelera()
+        {
+            
+            return View("AgregarCartelera");
+
+        }
+
+        [HttpPost]
+        public ActionResult AgregarCartelera(Carteleras c)
+        {
+            BaseTp cartelera = new BaseTp();
+            var agregar = new BaseTp();
+            agregar.Carteleras.Add(c);
+            agregar.SaveChanges();
+            return Redirect("GestionCarteleras");
+
+        }
     }
 }

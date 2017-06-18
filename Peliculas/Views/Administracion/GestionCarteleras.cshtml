@@ -1,0 +1,148 @@
+﻿@using Peliculas.Models
+@model List<CarteleraJoineada>
+@{
+    ViewBag.Title = "GestionCarteleras";
+    Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
+}
+@if (Session["NombreUsuario"] != null)
+{
+    <div class="row">
+
+
+        <div class="col-md-12">
+            <p>
+                @Html.ActionLink("Cargar nueva cartelera", "AgregarCartelera")
+            </p>
+            <table class="table table-hover">
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                       <b>Nombre de la Sede</b> 
+                    </td>
+
+                    <td>
+                        <b>Nombre de la Pelicula</b>
+                    </td>
+
+                    <td>
+                        <b>Hora de Inicio</b>
+                    </td>
+
+                    <td>
+                        <b>Fecha de Inicio</b>
+                    </td>
+
+                    <td>
+                        <b>Fecha de Fin</b>
+
+                    </td>
+
+                    <td>
+                        <b>Número de Sala</b>
+                    </td>
+
+                    <td>
+                        <b>Versión Pelicula</b>
+                    </td>
+
+                    <td>
+                        <b>Lunes</b>
+                    </td>
+
+                    <td>
+                        <b>Martes</b>
+                    </td>
+
+                    <td>
+                        <b>Miercoles</b>
+                    </td>
+
+                    <td>
+                        <b>Jueves</b>
+                    </td>
+
+                    <td>
+                        <b>Viernes</b>
+                    </td>
+
+                    <td>
+                        <b>Sabado</b>
+                    </td>
+
+                    <td>
+                        <b>Domingo</b>
+                    </td>
+
+                    <td>
+                        <b>Acciones</b>
+                    </td>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.HiddenFor(modelItem => item.IdCartelera)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SedeNombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PeliculaNombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CarteleraHI)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CarteleraFI)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CarteleraFF)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CarteleraNS)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.versionesNombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.lunes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.martes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.miercoles)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.jueves)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.viernes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.sabado)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.domingo)
+                        </td>
+                       
+                        <td>
+                            @Html.ActionLink("Editar", "EditarCartelera", new { id=item.IdCartelera  }) |
+                            
+                            @Html.ActionLink("Borrar", "BorrarCartelera", new {  id=item.IdCartelera  })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+
+
+
+}

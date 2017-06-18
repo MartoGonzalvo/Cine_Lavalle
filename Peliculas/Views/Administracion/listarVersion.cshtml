@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Versiones>
+
+<select class="form-control" id="IdVersion" name="IdVersion">
+
+    <option value="">Seleccione un opción</option>
+    @foreach (var ver in Model)
+    {
+        <option value="@ver.IdVersion">@ver.Nombre</option>
+    }
+
+
+</select>

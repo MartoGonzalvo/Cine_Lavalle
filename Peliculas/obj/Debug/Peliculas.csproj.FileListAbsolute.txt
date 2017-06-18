@@ -52,3 +52,5 @@ c:\users\administrador\documents\visual studio 2015\Projects\Peliculas\Peliculas
 c:\users\administrador\documents\visual studio 2015\Projects\Peliculas\Peliculas\obj\Debug\Peliculas.pdb
 C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.dll
 C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.SqlServer.xml

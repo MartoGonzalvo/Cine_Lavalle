@@ -11,7 +11,10 @@ namespace Peliculas.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            BaseTp img = new BaseTp();
+            List<Peliculas> listaImg = img.Peliculas.ToList();
+            return View(listaImg);
+            
         }
 
         

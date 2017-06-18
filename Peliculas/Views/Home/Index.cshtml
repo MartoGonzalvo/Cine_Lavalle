@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Peliculas>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div id="mainCarousel" class="carousel slide" data-ride="carousel">
@@ -9,26 +10,25 @@
         <li data-target="#mainCarousel" data-slide-to="2"></li>
     </ol>
     <!-- Wrapper for slides -->
+
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="img/FOTO " alt="...">
-            <div class="carousel-caption">
-                <h3>Slide Caption</h3>
+       @foreach (var img in @Model)
+       {
+            <div class="item active">
+                <img src="@Url.Content(img.Imagen)">
+                <div class="carousel-caption">
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="http://placehold.it/1920x650/777/fff&amp;text=Second+Slide" alt="...">
-            <div class="carousel-caption">
-                <h3>Slide Caption</h3>
+
+            <div class="item ">
+                <img src="@Url.Content(img.Imagen)">
+                <div class="carousel-caption">
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="http://placehold.it/1920x650/777/fff&amp;text=Third+Slide" alt="...">
-            <div class="carousel-caption">
-                <h3>Slide Caption</h3>
-            </div>
-        </div>
+
+       }
     </div>
+
     <!-- Controls -->
     <a class="left carousel-control" href="#mainCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
