@@ -139,9 +139,6 @@
     </Content>
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\main.css" />
-    <Content Include="Content\img\FOTO N 7.jpg" />
-    <Content Include="Content\img\FOTO N1.jpg" />
-    <Content Include="Content\img\FOTO N4.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -218,7 +215,6 @@
     <Content Include="Views\Administracion\GestionPeliculas.cshtml" />
     <Content Include="Views\Administracion\AgregarPelicula.cshtml" />
     <Content Include="Views\Administracion\listarClasificacion.cshtml" />
-    <Content Include="Views\Administracion\listarGenero.cshtml" />
     <Content Include="Views\Administracion\AgregarSede.cshtml" />
     <Content Include="Views\Administracion\GestionSede.cshtml" />
     <Content Include="Views\Administracion\GestionCarteleras.cshtml" />
@@ -227,6 +223,9 @@
     <Content Include="Views\Administracion\listarPelicula.cshtml" />
     <Content Include="Views\Administracion\listarVersion.cshtml" />
     <Content Include="Views\Administracion\listarSala.cshtml" />
+    <Content Include="Views\Administracion\EditarSede.cshtml" />
+    <Content Include="Views\Administracion\EditarCartelera.cshtml" />
+    <Content Include="Views\Administracion\listarGenero.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -235,6 +234,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\img\" />
     <Folder Include="Content\js\" />
   </ItemGroup>
   <ItemGroup>

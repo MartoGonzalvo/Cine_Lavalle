@@ -10,6 +10,9 @@ namespace Peliculas.Models
     {
         
         public int IdCartelera { get; set; }
+        public int IdSede { get; set; }
+        public int IdPelicula { get; set; }
+        public int IdVersion { get; set; }
         [Required]
         public string SedeNombre { get; set; }
         [Required]

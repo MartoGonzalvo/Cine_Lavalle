@@ -19,13 +19,14 @@ namespace Peliculas
         public int IdSede { get; set; }
         public int IdPelicula { get; set; }
         [Required]
-        [Display(Name= "Hora de Inicio")]
         public int HoraInicio { get; set; }
+        
+        
         [Required]
-        [Display(Name = "Fecha de Inicio")]
         public System.DateTime FechaInicio { get; set; }
+        
+        
         [Required]
-        [Display(Name = "Fecha de Fin")]
         public System.DateTime FechaFin { get; set; }
         [Required]
         public int NumeroSala { get; set; }

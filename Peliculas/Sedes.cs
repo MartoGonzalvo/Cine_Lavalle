@@ -11,7 +11,8 @@ namespace Peliculas
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Sedes
     {
         public Sedes()
@@ -20,9 +21,14 @@ namespace Peliculas
             this.Reservas = new HashSet<Reservas>();
         }
     
+        
         public int IdSede { get; set; }
+        [Required]
         public string Nombre { get; set; }
+        [Required]
         public string Direccion { get; set; }
+        [Required]
+        [Display(Name = "Precio General")]
         public decimal PrecioGeneral { get; set; }
     
         public virtual ICollection<Carteleras> Carteleras { get; set; }

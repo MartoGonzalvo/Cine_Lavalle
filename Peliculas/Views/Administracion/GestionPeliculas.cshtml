@@ -49,54 +49,10 @@
         </td>
         
         <td>
-            @if (item.IdCalificacion == 1)
-            {
-                <span>ATP</span>
-            }
-
-            @if (item.IdCalificacion == 2)
-            {
-                <span>Mayores de 13</span>
-            }
-
-            @if (item.IdCalificacion == 3)
-            {
-                <span>Mayores de 13 con resera</span>
-            }
-
-            @if (item.IdCalificacion == 4)
-            {
-                <span>Mayores de 16</span>
-            }
-
-            @if (item.IdCalificacion == 5)
-            {
-                <span>Mayores de 16 con reserva</span>
-            }
-            
+           @Html.DisplayFor(modelItem => item.Calificaciones.Nombre)
         </td>
         <td>
-            @if (item.IdGenero == 1)
-            {
-                <span>Comedia</span>
-            }
-
-            @if (item.IdGenero == 2)
-            {
-                <span>Terror</span>
-            }
-
-            @if (item.IdGenero == 3)
-            {
-                <span>Fantasia</span>
-            }
-
-            @if (item.IdGenero == 4)
-            {
-                <span>Ficcion</span>
-            }
-
-           
+           @Html.DisplayFor(modelItem => item.Generos.Nombre)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Duracion)

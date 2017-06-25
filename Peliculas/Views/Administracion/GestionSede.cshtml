@@ -24,6 +24,10 @@
                 <span>Precio de entrada general</span>
             </th>
 
+            <th>
+                Acciones
+            </th>
+
         </tr>
 
         @foreach (var item in Model)
@@ -38,6 +42,11 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.PrecioGeneral)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarSede", new { id = item.IdSede }) |
+
+                    @Html.ActionLink("Borrar", "EliminarSede", new { id = item.IdSede })
                 </td>
             </tr>
         }
