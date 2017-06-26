@@ -115,9 +115,9 @@
                             @Html.DisplayFor(modelItem => item.FechaCarga)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "EditarCartelera", new {  id=item.IdCartelera }) |
-                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                            @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                            @Html.ActionLink("Editar", "EditarCartelera", new {  id=item.IdCartelera }) |
+                            @Html.ActionLink("Borrar", "EliminarCartelera", new { id = item.IdCartelera }) |
+                           
                         </td>
                     </tr>
                 }

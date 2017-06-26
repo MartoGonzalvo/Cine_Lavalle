@@ -1,0 +1,4 @@
+﻿$("#HoraInicio").datetimepicker({
+
+    format: 'LT'
+});

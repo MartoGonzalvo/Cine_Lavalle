@@ -168,11 +168,11 @@ namespace Peliculas.Controllers
                                   join se in cartelera.Sedes on ca.IdSede equals se.IdSede
                                   join pe in cartelera.Peliculas on ca.IdPelicula equals pe.IdPelicula
                                   join ve in cartelera.Versiones on ca.IdVersion equals ve.IdVersion
-                                  select ca); // new Carteleras { IdCartelera = ca.IdCartelera, SedeNombre = se.Nombre, PeliculaNombre = pe.Nombre, CarteleraHI = ca.HoraInicio, CarteleraFI = ca.FechaInicio, CarteleraFF = ca.FechaFin, CarteleraNS = ca.NumeroSala, versionesNombre = ve.Nombre, lunes = ca.Lunes, martes = ca.Martes, miercoles = ca.Miercoles, jueves = ca.Jueves, viernes = ca.Viernes, sabado = ca.Sabado, domingo = ca.Domingo }).ToList();
+                                  select ca); 
 
 
             return View(listaCartelera);
-
+            
         }
 
 
@@ -184,36 +184,41 @@ namespace Peliculas.Controllers
 
         }
 
+
+
         [HttpPost]
         public ActionResult AgregarCartelera(Carteleras c)
         {
-            BaseTp cartelera = new BaseTp();
-            var agregar = new BaseTp();
-            agregar.Carteleras.Add(c);
+                BaseTp cartelera = new BaseTp();
+                var carteleraVerificacion = cartelera.Carteleras.Where(ca => ca.IdSede == c.IdSede).ToList();
 
-            try
-            {
-                agregar.SaveChanges();
-            }
-            catch (DbEntityValidationException ex)
-            {
-
-                var errorMessages = ex.EntityValidationErrors
-                        .SelectMany(x => x.ValidationErrors)
-                        .Select(x => x.ErrorMessage);
-                var fullErrorMessage = string.Join("; ", errorMessages);
-                var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                throw new DbEntityValidationException(exceptionMessage, ex.EntityValidationErrors);
-            }
-            
-                
-                return Redirect("GestionCarteleras");
-           
-                    
-               
+               /* foreach(var car in carteleraVerificacion)
+                {
+                    if (c.IdSede == car.IdSede && c.FechaInicio <= car.FechaInicio || c.FechaFin >= car.FechaFin)
+                    {
+                        ViewBag.msjError = true;
+                        
+                    }else
+                    {*/
+                        var agregar = new BaseTp();
+                        agregar.Carteleras.Add(c);
+                        agregar.SaveChanges();
+                        return Redirect("GestionCarteleras");
+                    /*}
+                }
+            return Redirect("AgregarCartelera");*/
         }
+                 
+                
+                
+            
+
         
-       
+
+
+            
+
+
 
         public ActionResult EditarCartelera(int id)
         {
@@ -224,7 +229,7 @@ namespace Peliculas.Controllers
                                             join ve in cartelera.Versiones on ca.IdVersion equals ve.IdVersion
                                             where ca.IdCartelera == id
                                             select ca).FirstOrDefault(); 
-           // Carteleras car = cartelera.Carteleras.Where(c => c.IdCartelera == id).FirstOrDefault();
+           
             return View(listaCartelera);
         }
 
@@ -234,7 +239,7 @@ namespace Peliculas.Controllers
 
             var editar = new BaseTp();
             Carteleras editarCartelera = editar.Carteleras.Where(car => car.IdCartelera == c.IdCartelera).FirstOrDefault();
-            //Carteleras editarCartelera = editar.Carteleras.Find(c.IdPelicula);
+            
 
             editarCartelera.IdSede = c.IdSede;
             editarCartelera.IdPelicula = c.IdPelicula;
@@ -251,20 +256,9 @@ namespace Peliculas.Controllers
             editarCartelera.Sabado = c.Sabado;
             editarCartelera.Domingo = c.Domingo;
             editarCartelera.FechaCarga = c.FechaCarga;
-            try
-            {
-                editar.SaveChanges();
-            }
-            catch (DbEntityValidationException ex)
-            {
-                
-                var errorMessages = ex.EntityValidationErrors
-                        .SelectMany(x => x.ValidationErrors)
-                        .Select(x => x.ErrorMessage);
-                var fullErrorMessage = string.Join("; ", errorMessages);
-                var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                throw new DbEntityValidationException(exceptionMessage, ex.EntityValidationErrors);
-            }
+            
+            editar.SaveChanges();
+           
 
             return RedirectToAction("GestionCarteleras");
         }

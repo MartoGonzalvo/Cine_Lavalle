@@ -19,6 +19,7 @@ namespace Peliculas
         public int IdSede { get; set; }
         public int IdPelicula { get; set; }
         [Required]
+        
         public int HoraInicio { get; set; }
         
         

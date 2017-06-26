@@ -138,7 +138,16 @@
       <LastGenOutput>20171C_TP.cs</LastGenOutput>
     </Content>
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awsome.min.css" />
+    <Content Include="Content\css\jquery-ui.min.css" />
     <Content Include="Content\css\main.css" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\datepicker.js" />
+    <Content Include="Content\js\html5shiv.js" />
+    <Content Include="Content\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\respond.min.js" />
+    <Content Include="Content\js\timepicker.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -226,6 +235,8 @@
     <Content Include="Views\Administracion\EditarSede.cshtml" />
     <Content Include="Views\Administracion\EditarCartelera.cshtml" />
     <Content Include="Views\Administracion\listarGenero.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplate\DateTime.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -234,8 +245,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\images\" />
     <Folder Include="Content\img\" />
-    <Folder Include="Content\js\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
