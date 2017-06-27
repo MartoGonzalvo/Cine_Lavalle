@@ -11,8 +11,19 @@
     <div class="col-md-6">
         @if (@ViewBag.msjError == true)
         {
-            <div class="alert alert-danger">Ya existe una pelicula para ese horario</div>
+            <div class="alert alert-danger">Ya existe una pelicula para esa fecha y horario</div>
         }
+        
+        @if (ViewBag.msjHorario == true)
+        {
+            <div class="alert alert-danger">Hay una pelicula termiando a esa hora y fecha. Cargue otro horario</div>
+        }
+
+       @if (@ViewBag.msjErrorHorario == true)
+       {
+        <div class="alert alert-danger">Ya existe una pelicula para ese horario</div>
+       }
+
         @using (Html.BeginForm())
         {
            

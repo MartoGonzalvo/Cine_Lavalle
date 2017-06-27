@@ -228,32 +228,37 @@ namespace Peliculas.Controllers
 
                foreach(var car in carteleraVerificacion)
                 {
-                    if (c.IdSede == car.IdSede && c.NumeroSala == car.NumeroSala && ((c.FechaInicio >= car.FechaInicio && c.FechaInicio <= car.FechaFin) || (c.FechaFin >= car.FechaInicio && c.FechaFin <= car.FechaFin)))
+                    decimal duracion = car.HoraInicio + (car.Peliculas.Duracion / 60);
+
+                    if(c.IdSede == car.IdSede && c.NumeroSala == car.NumeroSala && c.HoraInicio < duracion && ((c.FechaInicio >= car.FechaInicio && c.FechaInicio <= car.FechaFin) || (c.FechaFin >= car.FechaInicio && c.FechaFin <= car.FechaFin)))
+                    {
+                        ViewBag.msjHorario = true;
+                        return View("AgregarCartelera");
+                    }
+
+                    
+
+                    if (c.IdSede == car.IdSede && c.NumeroSala == car.NumeroSala && (c.HoraInicio == car.HoraInicio) && ((c.FechaInicio >= car.FechaInicio && c.FechaInicio <= car.FechaFin) || (c.FechaFin >= car.FechaInicio && c.FechaFin <= car.FechaFin)))
                     {
                         ViewBag.msjError = true;
-                        
-                    }else
+
+                    }
+                    else
                     {
                         var agregar = new BaseTp();
                         agregar.Carteleras.Add(c);
                         agregar.SaveChanges();
                         return Redirect("GestionCarteleras");
+                        
                     }
+                   
                 }
             return View("AgregarCartelera");
         }
                  
                 
                 
-            
-
-        
-
-
-            
-
-
-
+   
         public ActionResult EditarCartelera(int id)
         {
             var cartelera = new BaseTp();
