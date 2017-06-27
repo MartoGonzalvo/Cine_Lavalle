@@ -24,6 +24,7 @@ namespace Peliculas
     
         public int IdPelicula { get; set; }
         [Required]
+        [Display(Name = "Nombre de Pelicula")]
         public string Nombre { get; set; }
         [Required]
         public string Descripcion { get; set; }
@@ -36,7 +37,7 @@ namespace Peliculas
         [Required]
         public int Duracion { get; set; }
 
-        [Required]
+        
         public HttpPostedFileBase ArchivoImagen { get; set; }
 
         public System.DateTime FechaCarga { get; set; }

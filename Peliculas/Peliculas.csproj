@@ -237,6 +237,7 @@
     <Content Include="Views\Administracion\listarGenero.cshtml" />
     <Content Include="Views\Shared\DisplayTemplate\DateTime.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Administracion\EditarPelicula.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

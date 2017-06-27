@@ -34,6 +34,9 @@
         <th>
             <span>Fecha de Carga</span>
         </th>
+        <th>
+            <span>Acción</span>
+        </th>
         <th></th>
     </tr>
 
@@ -60,8 +63,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.FechaCarga)
         </td>
-        
-    </tr>
+        <td>
+            @Html.ActionLink("Editar", "EditarPelicula", new { id = item.IdPelicula })
+        </td>
+</tr>
 }
 
 </table>

@@ -24,6 +24,7 @@ namespace Peliculas
         
         public int IdSede { get; set; }
         [Required]
+        [Display(Name = "Sede")]
         public string Nombre { get; set; }
         [Required]
         public string Direccion { get; set; }

@@ -100,6 +100,40 @@ namespace Peliculas.Controllers
 
         }
 
+        public ActionResult EditarPelicula(int id)
+        {
+            BaseTp pelicula = new BaseTp();
+            Peliculas pel = pelicula.Peliculas.Where(p => p.IdPelicula == id).FirstOrDefault();
+            return View(pel);
+        }
+
+        [HttpPost]
+        public ActionResult EditarPelicula(Peliculas pe)
+        {
+              BaseTp pelicula = new BaseTp();
+                Peliculas pel = pelicula.Peliculas.Where(p => p.IdPelicula == pe.IdPelicula).FirstOrDefault();
+
+                string archivo = Path.GetFileNameWithoutExtension(pe.ArchivoImagen.FileName);
+                string extension = Path.GetExtension(pe.ArchivoImagen.FileName);
+                archivo = archivo + extension;
+                pe.Imagen = "/Content/img/" + archivo;
+                archivo = Path.Combine(Server.MapPath("/Content/img/"), archivo);
+                pe.ArchivoImagen.SaveAs(archivo);
+
+
+
+                pel.Nombre = pe.Nombre;
+                pel.Descripcion = pe.Descripcion;
+                pel.IdCalificacion = pe.IdCalificacion;
+                pel.Imagen = pe.Imagen;
+                pel.IdGenero = pe.IdGenero;
+                pel.Duracion = pe.Duracion;
+                pel.FechaCarga = pe.FechaCarga;
+                pelicula.SaveChanges();
+                return Redirect("GestionPeliculas");
+
+        }
+
         // Gestion de sedes
         public ActionResult GestionSede()
         {
@@ -192,21 +226,21 @@ namespace Peliculas.Controllers
                 BaseTp cartelera = new BaseTp();
                 var carteleraVerificacion = cartelera.Carteleras.Where(ca => ca.IdSede == c.IdSede).ToList();
 
-               /* foreach(var car in carteleraVerificacion)
+               foreach(var car in carteleraVerificacion)
                 {
-                    if (c.IdSede == car.IdSede && c.FechaInicio <= car.FechaInicio || c.FechaFin >= car.FechaFin)
+                    if (c.IdSede == car.IdSede && c.NumeroSala == car.NumeroSala && ((c.FechaInicio >= car.FechaInicio && c.FechaInicio <= car.FechaFin) || (c.FechaFin >= car.FechaInicio && c.FechaFin <= car.FechaFin)))
                     {
                         ViewBag.msjError = true;
                         
                     }else
-                    {*/
+                    {
                         var agregar = new BaseTp();
                         agregar.Carteleras.Add(c);
                         agregar.SaveChanges();
                         return Redirect("GestionCarteleras");
-                    /*}
+                    }
                 }
-            return Redirect("AgregarCartelera");*/
+            return View("AgregarCartelera");
         }
                  
                 

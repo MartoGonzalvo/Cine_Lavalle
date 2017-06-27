@@ -19,17 +19,20 @@ namespace Peliculas
         public int IdSede { get; set; }
         public int IdPelicula { get; set; }
         [Required]
-        
+        [Display(Name = "Hora de Inicio")]
         public int HoraInicio { get; set; }
         
         
         [Required]
+        [Display(Name = "Fecha de Inicio")]
         public System.DateTime FechaInicio { get; set; }
         
         
         [Required]
+        [Display(Name = "Fecha de Fin")]
         public System.DateTime FechaFin { get; set; }
         [Required]
+        [Display(Name = "Número de Sala")]
         public int NumeroSala { get; set; }
         [Required]
         public int IdVersion { get; set; }
@@ -40,6 +43,7 @@ namespace Peliculas
         public bool Viernes { get; set; }
         public bool Sabado { get; set; }
         public bool Domingo { get; set; }
+        [Display(Name = "Fecha de Carga")]
         public System.DateTime FechaCarga { get; set; }
     
         public virtual Peliculas Peliculas { get; set; }

@@ -1,0 +1,92 @@
+﻿@model Peliculas
+
+@{
+    ViewBag.Title = "AgregarPelicula";
+    Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
+}
+
+
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+
+        @using (Html.BeginForm("EditarPelicula", "Administracion", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                <h4>Editar Peliculas</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.IdPelicula)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Descripcion, 10, 50, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Imagen, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.ArchivoImagen, new { type = "file" })
+                        @Html.ValidationMessageFor(model => model.Imagen, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Calificaciones.Nombre, "IdCalificacion", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.Action("listarClasificacion", "Administracion")
+                        @Html.ValidationMessageFor(model => model.IdCalificacion, " ", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Generos.Nombre, "IdGenero", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.Action("listarGenero", "Administracion")
+                        @Html.ValidationMessageFor(model => model.IdGenero, " ", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Duracion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Duracion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Duracion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  
+                    <div class="col-md-10">
+                        
+                        @Html.HiddenFor(model => model.FechaCarga, new { @Value = DateTime.Today.ToString("yyyy-MM-dd") })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Volver al Listado", "GestionPeliculas")
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
