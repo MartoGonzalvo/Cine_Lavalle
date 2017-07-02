@@ -11,12 +11,28 @@ namespace Peliculas.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            BaseTp img = new BaseTp();
-            List<Peliculas> listaImg = img.Peliculas.ToList();
+            BaseTp cartelera = new BaseTp();
+            var listaImg = (from ca in cartelera.Carteleras
+                            join pe in cartelera.Peliculas on ca.IdPelicula equals pe.IdPelicula
+                            join ge in cartelera.Generos on pe.IdGenero equals ge.IdGenero
+                            join cal in cartelera.Calificaciones on pe.IdCalificacion equals cal.IdCalificacion
+                            where ca.FechaInicio<= DateTime.Now && ca.FechaFin>= DateTime.Now 
+                            select pe);
+
             return View(listaImg);
-            
+
+
+
+
+        }
+        [HttpPost]
+        public ActionResult Index(Peliculas p)
+        {
+
+            return RedirectToAction("ReservaPrevia", "Reserva", p);
+
+
         }
 
-        
     }
 }

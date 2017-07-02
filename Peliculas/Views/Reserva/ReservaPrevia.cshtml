@@ -1,0 +1,45 @@
+﻿@model Peliculas
+
+@{
+    ViewBag.Title = "Reserva de Peliculas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Reserva Paso 1</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+
+                    @Html.Label("Versión", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                    @Html.Action("listarVersion", "Reserva", new { cartelera = new Carteleras { IdPelicula = (int)TempData["IdPelicula"] } })
+                    
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.HiddenFor(model => model.IdPelicula, new { @Value = (int)TempData["IdPelicula"] })
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Continuar Reserva" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+     
+    </div>
+    <div class="col-md-2"></div>
+</div>

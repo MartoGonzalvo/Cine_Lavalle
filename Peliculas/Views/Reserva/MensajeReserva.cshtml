@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<Reservas>
+
+@{
+    ViewBag.Title = "Reserva de Peliculas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+ 
+  }
+
+<div>
+   <br/>
+ <span> La reserva se completo correctamente.</span>
+ <p>Recorda que con el código de reserva tenes que retirar tus entradas.</p>
+    <br />
+
+</div>
+
+<div class="row">
+
+        <div class="col-md-6">
+
+            <table class="table">
+                <tr>
+
+                    <th>
+                        @Html.Label("Codigo de Reserva", new { @class = "control-label col-md-10" })
+                    </th>
+                    <th>
+                        @Html.Label("Cantidad de Entradas", new { @class = "control-label col-md-10" })
+                    </th>
+                    <th>
+                        @Html.Label("Precio Total", new { @class = "control-label col-md-10" })
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdReserva)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CantidadEntradas)
+                        </td>
+                        <td>
+                            @(item.Sedes.PrecioGeneral * item.CantidadEntradas)
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+

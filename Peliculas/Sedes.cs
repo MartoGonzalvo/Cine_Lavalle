@@ -25,6 +25,7 @@ namespace Peliculas
         public int IdSede { get; set; }
         [Required]
         [Display(Name = "Sede")]
+        [StringLength(5, ErrorMessage = "ingrese solamente 5 caracteres")]
         public string Nombre { get; set; }
         [Required]
         public string Direccion { get; set; }

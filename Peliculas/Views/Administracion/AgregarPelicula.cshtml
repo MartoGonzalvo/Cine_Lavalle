@@ -11,7 +11,7 @@
     <div class="col-md-6">
         @using (Html.BeginForm("AgregarPelicula","Administracion",FormMethod.Post, new { enctype = "multipart/form-data"}))
         {
-
+            @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
                 <h3>Gestión de peliculas</h3>
@@ -85,8 +85,10 @@
 
         <div>
             @Html.ActionLink("Volver al Listado", "GestionPeliculas")
+            
         </div>
     </div>
+   
     <div class="col-md-2"></div>
 </div>
 

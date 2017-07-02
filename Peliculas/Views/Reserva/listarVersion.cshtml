@@ -1,0 +1,13 @@
+﻿@using Peliculas.Models
+@model IEnumerable<SedesVersiones>
+
+<select class="form-control" id="IdVersion" name="IdVersion">
+
+    <option value="">Seleccione un opción</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.IdVersion">@item.VersionNombre</option>
+    }
+
+
+</select>

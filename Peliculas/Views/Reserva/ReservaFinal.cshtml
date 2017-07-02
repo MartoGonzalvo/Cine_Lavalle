@@ -1,0 +1,144 @@
+﻿
+@model Reservas
+
+@{
+    ViewBag.Title = "Reserva de Peliculas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+@if (TempData["ReservaFin"] == null && ViewBag.msj== null)
+    {
+        <p>Se ha producido un error, por favor vuelva a realizar la reserva.</p>
+        @Html.ActionLink("Volver al Inicio", "../Home/Index")
+    }
+    else
+    {
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Reserva - Paso Final</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.Label("Pelicula", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="IdPelicula" name="Pelicula">
+                            @foreach (var item in (List<Carteleras>)TempData["ReservaFin"])
+                            {
+                                <option value="@item.Peliculas.IdPelicula">@item.Peliculas.Nombre</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        @Html.Label("Genero", new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <select class="form-control" id="IdGenero" name="Genero">
+                                @foreach (var item in (List<Carteleras>)TempData["ReservaFin"])
+                                {
+                                    <option value="@item.Peliculas.Generos.IdGenero">@item.Peliculas.Generos.Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    @Html.Label("Clasificación", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="IdCalificacion" name="Calificacion">
+                            @foreach (var item in (List<Carteleras>)TempData["ReservaFin"])
+                            {
+                                <option value="@item.Peliculas.Calificaciones.IdCalificacion">@item.Peliculas.Calificaciones.Nombre</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Precio", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="Precio" name="Precio">
+                            @foreach (var item in (List<Carteleras>)TempData["ReservaFin"])
+                            {
+                                <option value="@item.Sedes.PrecioGeneral">@item.Sedes.PrecioGeneral</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div><h4>Complete los siguientes Campos</h4><hr /></div>
+
+                <div class="form-group">
+                    @Html.Label("Email", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    @Html.Label("Tipo Documento", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.Action("listarDoc", "Reserva")
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Documento", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NumeroDocumento, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NumeroDocumento, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Cant. Entradas", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CantidadEntradas, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CantidadEntradas, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                    <div class="col-md-10">
+                        @foreach (var item in (List<Carteleras>)TempData["ReservaFin"])
+                        {
+                            @Html.HiddenFor(model => model.IdVersion, new { @Value =@item.IdVersion })
+                            @Html.HiddenFor(model => model.IdSede, new { @Value = @item.IdSede })
+                            @Html.HiddenFor(model => model.IdPelicula, new { @Value =@item.IdPelicula })
+                            @Html.HiddenFor(model => model.FechaHoraInicio, new { @Value = DateTime.Today.ToString("yyyy-MM-dd") })
+                            @Html.HiddenFor(model => model.FechaCarga, new { @Value = DateTime.Today.ToString("yyyy-MM-dd") })
+                        }
+
+
+                        
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.Label("Recuerde que la reserva estará vigente hasta una hora antes de la función elegida y deberá ser confirmada en el cine seleccionado", new { @class = "control-label col-md-12" })
+
+                        </div>  
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Reservar" class="btn btn-primary" />
+                        </div>
+                    </div>
+                   
+                </div>
+                }
+                
+            </div>
+           
+            <div class="col-md-2"></div>
+        </div>
+      
+            <div class="alert alert-danger">
+                @ViewBag.msj
+            </div>
+        
+
+}

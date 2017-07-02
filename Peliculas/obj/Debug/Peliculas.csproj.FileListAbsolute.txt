@@ -54,3 +54,227 @@ C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas
 C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.xml
 C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.SqlServer.dll
 C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Peliculas\Peliculas\bin\EntityFramework.SqlServer.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\ApplicationInsights.config
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\csc.exe
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\vbc.exe
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\VBCSCompiler.exe
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Peliculas.dll.config
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Peliculas.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Peliculas.pdb
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\EntityFramework.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\EntityFramework.SqlServer.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Web.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Helpers.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Mvc.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Razor.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Razor.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\EntityFramework.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\EntityFramework.SqlServer.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Web.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Razor.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Razor.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Helpers.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\System.Web.Mvc.xml
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\es\System.Web.Razor.resources.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.resources.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.csprojResolveAssemblyReference.cache
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.dll
+C:\Users\ale\Documents\Visual Studio 2015\Projects\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.pdb
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\ApplicationInsights.config
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Peliculas.dll.config
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Peliculas.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Peliculas.pdb
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Web.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Razor.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Web.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Razor.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\es\System.Web.Razor.resources.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.dll
+C:\Users\Admin\Desktop\final\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.pdb
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\ApplicationInsights.config
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\csc.exe
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\vbc.exe
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Peliculas.dll.config
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Peliculas.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Peliculas.pdb
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\EntityFramework.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Web.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Helpers.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Mvc.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Razor.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Razor.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\EntityFramework.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.Web.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Razor.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Webpages.Razor.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Helpers.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\System.Web.Mvc.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\es\System.Web.Razor.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle\Peliculas\obj\Debug\Peliculas.pdb
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\ApplicationInsights.config
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\csc.exe
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\vbc.exe
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Peliculas.dll.config
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Peliculas.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Peliculas.pdb
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\EntityFramework.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.Web.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Helpers.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Mvc.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Razor.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Webpages.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Webpages.Razor.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\EntityFramework.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.Web.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Razor.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Webpages.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Webpages.Razor.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Helpers.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\System.Web.Mvc.xml
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\es\System.Web.Razor.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\obj\Debug\Peliculas.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\obj\Debug\Peliculas.dll
+C:\Users\Administrador\Desktop\Cine_Lavalle_Final\Peliculas\obj\Debug\Peliculas.pdb

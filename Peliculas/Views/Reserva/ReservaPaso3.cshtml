@@ -1,0 +1,135 @@
+﻿
+@model IEnumerable<Carteleras>
+@{
+    ViewBag.Title = "Reserva de Peliculas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Reserva Paso 3</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+
+                    @Html.Label("Versión", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="IdVersion" name="IdVersion">
+
+
+                            @foreach (var item in Model)
+                            {
+                                <option value="@item.IdVersion">@item.Versiones.Nombre</option>
+                            }
+
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Sede", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="IdSede" name="IdSede">
+
+                            
+                            @foreach (var item in Model)
+                            {
+                                <option value="@item.IdSede">@item.Sedes.Nombre</option>
+                            }
+
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Día", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="Dia" name="Dia">
+
+                            <option value="">Seleccione un opción</option>
+                            @foreach (var item in Model)
+                            {
+                                if (@item.Lunes == true)
+                                {
+                                    <option value="lunes">lunes</option>
+                                }
+                                if (@item.Martes == true)
+                                {
+                                    <option value="martes">martes</option>
+                                }
+                                if (@item.Miercoles == true)
+                                {
+                                    <option value="miercoles">miercoles</option>
+                                }
+                                if (@item.Jueves == true)
+                                {
+                                    <option value="jueves">jueves</option>
+                                }
+                                if (@item.Viernes == true)
+                                {
+                                    <option value="viernes">viernes</option>
+                                }
+                                if (@item.Sabado == true)
+                                {
+                                    <option value="sabado">sabado</option>
+                                }
+                                if (@item.Domingo == true)
+                                {
+                                    <option value="domingo">domingo</option>
+                                }
+
+                            }
+
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Hora", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" id="HoraInicio" name="HoraInicio">
+
+                            <option value="">Seleccione un opción</option>
+                            @foreach (var item in Model)
+                            {
+                                <option value="@item.HoraInicio">@item.HoraInicio :00 hs</option>
+                            }
+
+
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    @foreach (var item in Model)
+                    {
+
+                        @Html.Hidden("IdPelicula", @item.IdPelicula)
+                    }
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Continuar Reserva" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="col-md-2"></div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Reservas>
+@{
+    ViewBag.Title = "Lista de Reportes";
+    Layout = "~/Views/Shared/_LayoutAdministracion.cshtml";
+}
+@if (Session["NombreUsuario"] != null)
+{
+    <h2>Lista de Reportes</h2>
+
+   
+    <table class="table table-hover">
+        <tr>
+
+            <th>
+                <span>Sede</span>
+            </th>
+            <th>
+                <span>Version</span>
+            </th>
+            <th>
+                <span>Pelicula </span>
+            </th>
+            <th>
+                <span>Precio </span>
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sedes.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Versiones.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Peliculas.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sedes.PrecioGeneral)
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.ActionLink("Volver al listado","ReporteReserva")
+}
+
+
+

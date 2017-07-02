@@ -176,6 +176,7 @@
     </Compile>
     <Compile Include="Controllers\AdministracionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Generos.cs">
       <DependentUpon>20171C_TP.tt</DependentUpon>
     </Compile>
@@ -183,6 +184,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CarteleraJoineada.cs" />
+    <Compile Include="Models\SedesVersiones.cs" />
     <Compile Include="Peliculas.cs">
       <DependentUpon>20171C_TP.tt</DependentUpon>
     </Compile>
@@ -238,6 +240,15 @@
     <Content Include="Views\Shared\DisplayTemplate\DateTime.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\Administracion\EditarPelicula.cshtml" />
+    <Content Include="Views\Reserva\listarDoc.cshtml" />
+    <Content Include="Views\Reserva\listarVersion.cshtml" />
+    <Content Include="Views\Reserva\MensajeReserva.cshtml" />
+    <Content Include="Views\Reserva\ReservaFinal.cshtml" />
+    <Content Include="Views\Reserva\ReservaPaso2.cshtml" />
+    <Content Include="Views\Reserva\ReservaPaso3.cshtml" />
+    <Content Include="Views\Reserva\ReservaPrevia.cshtml" />
+    <Content Include="Views\Administracion\ListaReserva.cshtml" />
+    <Content Include="Views\Administracion\ReporteReserva.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

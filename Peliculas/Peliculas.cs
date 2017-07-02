@@ -23,21 +23,22 @@ namespace Peliculas
         }
     
         public int IdPelicula { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Ingrese el nombre de la pelicula")]
+        [StringLength(5,ErrorMessage ="ingrese solamente 5 caracteres")]
         [Display(Name = "Nombre de Pelicula")]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Ingrese una descripción")]
         public string Descripcion { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Cargue una imágen")]
         public string Imagen { get; set; }
         [Required(ErrorMessage = "El campo calificación es obligatorio")] 
         public int IdCalificacion { get; set; }
         [Required(ErrorMessage = "El campo Género es obligatorio")]
         public int IdGenero { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Ingrese tiempo de duración")]
         public int Duracion { get; set; }
 
-        
+        [Required(ErrorMessage = "Cargue una imágen")]
         public HttpPostedFileBase ArchivoImagen { get; set; }
 
         public System.DateTime FechaCarga { get; set; }

@@ -6,6 +6,9 @@ using System.Web;
 using System.Web.Mvc;
 using Peliculas.Models;
 using System.Data.Entity.Validation;
+using System.Diagnostics.CodeAnalysis;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects.DataClasses;
 
 namespace Peliculas.Controllers
 {
@@ -52,9 +55,17 @@ namespace Peliculas.Controllers
         //metodo que lista todos los objetos de una tabla y las guarda en una lista
         public ActionResult GestionPeliculas()
         {
-            BaseTp peliculas = new BaseTp();
-            List<Peliculas> listaPeliculas = peliculas.Peliculas.ToList();
-            return View("GestionPeliculas", listaPeliculas);
+            if(Session["NombreUsuario"]== null)
+            {
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                BaseTp peliculas = new BaseTp();
+                List<Peliculas> listaPeliculas = peliculas.Peliculas.ToList();
+                return View("GestionPeliculas", listaPeliculas);
+            }
+            
         }
 
 
@@ -83,7 +94,8 @@ namespace Peliculas.Controllers
         [HttpPost]
         public ActionResult AgregarPelicula(Peliculas p)
         {
-           
+            if (ModelState.IsValid)
+            {
                 string archivo = Path.GetFileNameWithoutExtension(p.ArchivoImagen.FileName);
                 string extension = Path.GetExtension(p.ArchivoImagen.FileName);
                 archivo = archivo + extension;
@@ -94,8 +106,15 @@ namespace Peliculas.Controllers
                 BaseTp agregar = new BaseTp();
                 agregar.Peliculas.Add(p);
                 agregar.SaveChanges();
-            
-            return Redirect("GestionPeliculas");
+
+                return Redirect("GestionPeliculas");
+            }
+            else
+            {
+                return View("AgregarPelicula");
+            }
+           
+               
             
 
         }
@@ -130,16 +149,23 @@ namespace Peliculas.Controllers
                 pel.Duracion = pe.Duracion;
                 pel.FechaCarga = pe.FechaCarga;
                 pelicula.SaveChanges();
-                return Redirect("GestionPeliculas");
+                return RedirectToAction("GestionPeliculas");
 
         }
 
         // Gestion de sedes
         public ActionResult GestionSede()
         {
-            BaseTp sedes = new BaseTp();
-            List<Sedes> listaSede = sedes.Sedes.ToList();
-            return View("GestionSede", listaSede);
+            if (Session["NombreUsuario"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                BaseTp sedes = new BaseTp();
+                List<Sedes> listaSede = sedes.Sedes.ToList();
+                return View("GestionSede", listaSede);
+            }
 
         }
 
@@ -197,16 +223,22 @@ namespace Peliculas.Controllers
 
         public ActionResult GestionCarteleras()
         {
-            BaseTp cartelera = new BaseTp();
-            var listaCartelera = (from ca in cartelera.Carteleras
-                                  join se in cartelera.Sedes on ca.IdSede equals se.IdSede
-                                  join pe in cartelera.Peliculas on ca.IdPelicula equals pe.IdPelicula
-                                  join ve in cartelera.Versiones on ca.IdVersion equals ve.IdVersion
-                                  select ca); 
+            if (Session["NombreUsuario"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                BaseTp cartelera = new BaseTp();
+                var listaCartelera = (from ca in cartelera.Carteleras
+                                      join se in cartelera.Sedes on ca.IdSede equals se.IdSede
+                                      join pe in cartelera.Peliculas on ca.IdPelicula equals pe.IdPelicula
+                                      join ve in cartelera.Versiones on ca.IdVersion equals ve.IdVersion
+                                      select ca);
 
 
-            return View(listaCartelera);
-            
+                return View(listaCartelera);
+            }
         }
 
 
@@ -253,6 +285,13 @@ namespace Peliculas.Controllers
                     }
                    
                 }
+           if( carteleraVerificacion.Count==0 ) {
+                var agregar = new BaseTp();
+                agregar.Carteleras.Add(c);
+                agregar.SaveChanges();
+                return Redirect("GestionCarteleras");
+            }
+
             return View("AgregarCartelera");
         }
                  
@@ -335,6 +374,63 @@ namespace Peliculas.Controllers
         {
 
             return PartialView("listarSala");
+        }
+
+
+        public ActionResult ReporteReserva()
+        {
+            if (Session["NombreUsuario"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return View("ReporteReserva");
+            }
+        }
+
+
+        [HttpPost]
+        public ActionResult ReporteReserva(Reservas re)
+        {
+
+            TempData["IdPelicula"] = re.IdPelicula;
+            TempData["Desde"] = re.FechaCarga;
+            TempData["Hasta"] = re.FechaHoraInicio;
+            var car = new BaseTp();
+            var dif = (from c in car.Reservas
+                       where System.Data.Entity.SqlServer.SqlFunctions.DateDiff("day", re.FechaCarga, re.FechaHoraInicio) >= 30
+                       select c).ToList();
+
+            if (dif.Count != 0)
+            {
+                ViewBag.msj = "El rango de dias no puede ser superior a 30 dias";
+                return View("ReporteReserva");
+            }
+            else
+            {
+                return View("ListaReserva");
+            }
+
+        }
+        public ActionResult ListaReserva()
+        {
+            var pelicula = (int)TempData["IdPelicula"];
+            var desde = (DateTime)TempData["Desde"];
+            var hasta = (DateTime)TempData["Hasta"];
+            BaseTp car = new BaseTp();
+            // var listarSedes= car.Carteleras.Where(model => model.IdVersion.Equals(ca.IdVersion)).ToList();
+            var listaRe = (from re in car.Reservas
+                           join pe in car.Peliculas on re.IdPelicula equals pe.IdPelicula
+                           join s in car.Sedes on re.IdSede equals s.IdSede
+                           join v in car.Versiones on re.IdVersion equals v.IdVersion
+                           where re.IdPelicula == pelicula
+                           where re.FechaHoraInicio >= desde
+                           where re.FechaHoraInicio <= hasta
+                           select re).ToList();
+
+            return View(listaRe);
+
         }
     }
 }

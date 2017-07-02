@@ -1,0 +1,13 @@
+﻿@model IEnumerable<TiposDocumentos>
+
+
+<select class="form-control" id="IdTipoDocumento" name="IdTipoDocumento">
+
+    <option value="">Seleccione un opción</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.IdTipoDocumento">@item.Descripcion</option>
+    }
+
+
+</select>
